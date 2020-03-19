@@ -1,0 +1,346 @@
+/* Border Box */
+html {
+  background: linear-gradient(#EFEAE7 /*grey-white*/ 20%,rgb(243, 236, 232) /*baby-pink*/ 80%);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* picture element */
+picture {
+	display: block;
+	width: 100%;
+}
+/* Responsive Image Gallery */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+/* Responsive Img Gallery media quiery for ipad */
+@media screen and (max-width:768px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive Img Gallery media quiery for desktop */
+@media screen and (max-width:1024px) {
+  .column {
+    flex: 100%;
+    max-width: 100;
+  }
+}
+/* Website Icon and Title */
+/* on mobile and tablet devices, website icon and title will
+vertically align */
+  .iconandtitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+@media only screen and (min-width : 320px) {
+  /* makes img smaller on mobile/tablet */
+  .iconandtitle img {
+    width: 200px;
+    height: 200px;
+  }
+  .iconandtitle h1 {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .iconandtitle img{
+    width: 250px;
+    height: 250px;
+  }
+}
+/* if larger then 768px, website icon and title will 
+horizontally align */
+@media only screen and (min-width : 1024px) {
+  .iconandtitle {
+      display: flex;
+      flex-direction: row;
+      justify-content: row;
+      align-items: row;
+  }
+  /* makes img slightly bigger then it was on mobile/tablet */
+  .iconandtitle img {
+    width: 280px;
+    height: 280px;
+  }
+  /* title increases size on desktop */
+  .iconandtitle h1 {
+    font-size: 40px;
+  }
+}
+/* Navigation */
+.NavigationStyle {
+  background:white;
+  /*border-radius: .80rem .80rem .80rem .80rem;*/
+  /*box-shadow: .20rem .10rem .20rem .10rem #0D0B0c; /*black*/
+	list-style: none;
+	margin: 10px;
+	padding: 0;
+
+	display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  font-family: 'archivo-regular', sans-serif;
+  font-size: 16px;
+}
+/* Navigation Link Style */
+.NavigationStyle a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	color: #0D0B0c; /* black */
+	display: block;
+	padding: 1em;
+	text-align: center;
+  text-decoration: none;
+}
+/* Navigation media quiery for mobile */
+@media all and (min-width: 320px) {
+	.NavigationStyle {
+		flex-flow: row wrap;
+    justify-content: space-around;
+	}
+}
+/* Navigation media quiery for ipad */
+@media all and (min-width: 768px) {
+	.NavigationStyle {
+		justify-content: space-around;
+	}
+}
+/* Navigation media quiery for desktop */
+@media all and (min-width: 1024px) {
+  .NavigationStyle {
+    justify-content: flex-start;
+  }
+}
+/* Center Div Content */
+.CenterDivContent {
+    background-color: rgb(255, 255, 255); 
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+}
+/* media quieries for Center Div Content */
+@media only screen and (min-width : 320px) {
+  .CenterDivContent {
+    background-color:rgb(255, 255, 255); 
+    margin: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .CenterDivContent {
+    margin: auto;
+    width: 700px;
+    height: 700px;
+  }
+}
+.CenterProjContent {
+  background-color: rgb(255, 255, 255); 
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  width:100%;
+}
+/* projects menu */
+.projectsmenu {
+  display: flex;
+}
+/* social media icons */
+.socialmediaicons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 6rem;
+}
+/* Nav Unvisited Link */
+a.navhover:link {
+    color: #0D0B0C; /*black*/
+    text-decoration: none;
+}
+/* Nav Visited Link */
+a.navhover:visted {
+    color:#565759; /*grey*/
+    text-decoration: none;
+}
+/* Nav Hover Link Color */
+a.navhover:hover {
+    background-color: #0D0B0C; /*black*/
+    color:#F2F2F2; 
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Nav Selected Link */
+a.navhover:active {
+    color:#F2F2F2; /*white*/
+    text-decoration: underline;
+}
+/* Link to Projects in Home (index.html) */
+a.linktoproj {
+  color: rgb(216, 105, 79);
+}
+a.linktoproj:hover {
+  background-color: none;
+}
+/* Body */
+body {
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/* Images */
+img {
+    height: auto;
+    margin: 0;
+    padding: .35rem;
+    width: 300px;
+}
+/* projectsmenu image hover effects */
+a img:hover {
+  transition: 300ms ease-in-out;
+  filter: blur(3px);
+}
+/* paragraph <p> elements */
+p {
+    font-family: 'archivo-regular', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+/* h1 headings */
+h1 {
+  color:#F28F79; /*mango*/
+  font-family: 'Alatsi', sans-serif;
+  font-size: 30px;
+  text-shadow: -2px 0 #0D0B0C, 0 1px #0D0B0C, 1px 0 #0D0B0C, 0 -1px #0D0B0C; /*black*/
+  margin: .10rem;
+}
+/* h2 headings */
+h2 {
+  color:#0D0B0c; /*black*/
+  font-family: 'Alatsi', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  padding: 30px;
+}
+/* h3 headings */
+h3 {
+  background-color:rgb(255, 255, 255); 
+  font-family: 'archivo-regular', sans-serif;
+}
+@media only screen and (min-width : 320px) {
+  h3 {
+    background-color:rgb(255, 255, 255); 
+    font-family: 'archivo-regular', sans-serif;
+    font-size: 14px;
+    margin: 40px;
+    text-align: center;
+    padding: 40px;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  h3 {
+    margin: auto;
+    width: 700px;
+  }
+}
+/* social media icons */
+ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+}
+ul li span
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F28F79; /*mango*/
+  transition: 0.5s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+}
+ul li:hover span:nth-child(5)
+{
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+ul li:hover span:nth-child(4)
+{
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+ul li:hover span:nth-child(3)
+{
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+ul li:hover span:nth-child(2)
+{
+  transform: translate(10px, -10px);
+  opacity: .4;
+}
+ul li:hover span:nth-child(1)
+{
+  transform: translate(0,0);
+  opacity: .2;
+}
+/* footer */
+.footer {
+  text-align: center;
+}
+@media only screen and (max-width : 1024px) {
+  .footer p {
+    font-size: 16px;
+  }
+}
+
+/* font */
+@font-face {
+  font-family: 'archivo-regular';
+  src: url('fonts/archivo-regular-webfont.woff2') format('woff2'),
+       url('fonts/archivo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
